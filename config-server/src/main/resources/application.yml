@@ -1,0 +1,19 @@
+server:
+  port: 8769
+spring:
+  application:
+    name: config-server
+  profiles:
+    # 指定从本地仓库获取配置文件
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          # 指定配置文件路径
+          search-locations: classpath:/shared
+eureka:
+  client:
+    # 服务注册中心路径
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
