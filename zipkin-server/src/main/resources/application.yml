@@ -2,7 +2,7 @@ server:
   port: 9411
 spring:
   application:
-    name: config-server
+    name: zipkin-server
 eureka:
   client:
     # 服务注册中心路径
